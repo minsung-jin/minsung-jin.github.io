@@ -15,6 +15,8 @@ Jekyll은 다양한 포맷의 원본 텍스트 파일을 템플릿 디렉토리�
 
 ## 설치
 
+---
+
 ### 준비물
 
 * Ruby
@@ -25,6 +27,8 @@ Jekyll은 다양한 포맷의 원본 텍스트 파일을 템플릿 디렉토리�
 	* Jekyll 2나 그 이전버전의 경우
 
 ## Ruby 설치
+
+---
 
 ### Windows 환경에서 Ruby를 설치하는 방법
 
@@ -59,6 +63,10 @@ Jekyll은 다양한 포맷의 원본 텍스트 파일을 템플릿 디렉토리�
 
 ## Jekyll 설치
 
+---
+
+###  CLI를 이용하여 Jekyll 설치
+
 * jekyll install
 	```
 	gem install jekyll
@@ -81,6 +89,8 @@ Jekyll은 다양한 포맷의 원본 텍스트 파일을 템플릿 디렉토리�
 	```
 
 ## github pages 에 블로그 운영하기
+
+--- 
 
 ### github 에 pages 원격 저장소 만들기
 
