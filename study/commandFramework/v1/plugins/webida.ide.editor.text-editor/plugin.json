@@ -1,0 +1,44 @@
+{
+  "extensions": {
+    "webida.platform.command-system:commands": {
+      "handlerModule": "edit-command",
+      "commands": [
+        {
+          "id": "undo-edit",
+          "shortcut": {
+            "defaultKey": "ctrl+z",
+            "propagate": "false"
+          }
+        },
+        {
+          "id": "redo-edit",
+          "shortcut": {
+            "defaultKey": "ctrl+r"
+          }
+        }
+      ]
+    },
+    "webida.platform.command-system:menus": {
+      "menus": [
+        {
+          "type": "main-menu",
+          "id": "edit",
+          "name": "&Edit",
+          "location": "/",
+          "items": [
+            {
+              "name": "&Undo",
+              "id": "undo",
+              "commandId": "undo-edit"
+            },
+            {
+              "name": "&Redo",
+              "id": "redo",
+              "commandId": "redo-edit"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

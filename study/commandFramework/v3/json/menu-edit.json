@@ -1,0 +1,31 @@
+{
+    "module": "edit-plugin",
+    "items": [
+       {
+            "id": "edit",
+            "name": "Edit",
+            "commandId": "edit",
+            "location": "/",
+            "type": "top-menu",
+            "items": [
+                {
+                    "id": "undo-edit",
+                    "name": "Undo",
+                    "commandId": "undo-edit"
+                },
+                {
+                    "id": "redo-edit",
+                    "name": "Redo",
+                    "commandId": "redo-edit"
+                }
+            ]
+        },
+        {
+            "id": "delete-edit",
+            "name": "Delete",
+            "commandId": "delete-edit",
+            "location": "/edit/redo-edit?after",
+            "type": "top-menu"
+        }
+    ]
+}

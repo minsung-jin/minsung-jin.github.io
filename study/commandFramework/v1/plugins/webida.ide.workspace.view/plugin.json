@@ -1,0 +1,56 @@
+{
+  "extensions": {
+    "webida.platform.command-system:commands": {
+      "handlerModule": "file-command",
+      "commands": [
+        {
+          "id": "new-file",
+          "shortcut": {
+            "defaultKey": "ctrl+n",
+            "propagate": "false"
+          }
+        },
+        {
+          "id": "save-file",
+          "shortcut": {
+            "defaultKey": "ctrl+s"
+          }
+        }
+      ]
+    },
+    "webida.platform.command-system:menus": {
+      "menus": [
+        {
+          "type": "main-menu",
+          "id": "file",
+          "name": "&File",
+          "location": "/",
+          "items": [
+            {
+              "name": "&New File",
+              "id": "new-file",
+              "commandId": "new-file"
+            },
+            {
+              "name": "&Save File",
+              "id": "save-file",
+              "commandId": "save-file"
+            }
+          ]
+        },
+        {
+          "type": "context-menu",
+          "id": "workspace",
+          "location": "/",
+          "items": [
+            {
+              "name": "Preview",
+              "id": "preview",
+              "commandId": "showPreview"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

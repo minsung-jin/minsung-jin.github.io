@@ -1,0 +1,14 @@
+{
+  "extensionPoints" : {
+    "webida.platform.command-system:commands": [
+      { "name" : "commands", "type" : "array", "desc" : "" },
+      { "name" : "handlerModule", "type" : "string", "desc" : "" }
+    ],
+    "webida.platform.command-system:menus": [
+      { "name" : "menus", "type" : "array", "desc" : "" }
+    ],
+    "webida.platform.command-system:config": [
+      { "name" : "config", "type" : "string", "desc" : "" }
+    ]
+  }
+}

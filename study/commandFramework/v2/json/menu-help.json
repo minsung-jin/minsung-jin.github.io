@@ -1,0 +1,62 @@
+{
+    "module": "help-plugin",
+    "items": [
+        {
+            "id": "help",
+            "name": "Help",
+            "commandId": "help",
+            "location": "/",
+            "type": "top-menu",
+            "items": [
+                {
+                    "id": "command-list-help",
+                    "name": "Command List...",
+                    "commandId": "command-list-help"
+                },
+                {
+                    "id": "about-help",
+                    "name": "About",
+                    "commandId": "about-help"
+                }
+            ]
+        },
+        {
+            "id": "line",
+            "name": "Line",
+            "commandId": "",
+            "location": "/",
+            "type": "context-menu",
+            "items": [
+                {
+                    "id": "line-indent",
+                    "name": "Indent",
+                    "commandId": "line-indent"
+                },
+                {
+                    "id": "line-dedent",
+                    "name": "Dedent",
+                    "commandId": "line-dedent"
+                }
+            ]
+        },
+        {
+            "id": "source",
+            "name": "Source",
+            "commandId": "",
+            "location": "/",
+            "type": "context-menu",
+            "items": [
+                {
+                    "id": "source-fold",
+                    "name": "Fold",
+                    "commandId": "source-fold"
+                },
+                {
+                    "id": "source-beautify-all",
+                    "name": "Beautify All",
+                    "commandId": "source-beautify-all"
+                }
+            ]
+        }
+    ]
+}
