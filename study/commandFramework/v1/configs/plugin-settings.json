@@ -1,9 +1,0 @@
-{
-  "startPlugins" : ["webida.platform.workbench"],
-  "plugins" : {
-    "webida.ide.editor.text-editor" : "plugins/webida.ide.editor.text-editor",
-    "webida.ide.workspace.view" : "plugins/webida.ide.workspace.view",
-    "webida.platform.command-system" : "plugins/webida.platform.command-system",
-    "webida.platform.workbench" : "plugins/webida.platform.workbench"
-  }
-}

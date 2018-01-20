@@ -26,13 +26,12 @@
     moment.locale('ko');
 
     return moment().format('YYYY. M. D (dd)');
-  }
+  };
 
-  $(function() {
-    if (window.location.pathname !== HOME_PATH || window.location.hash !== '') {
+  if (window.location.pathname !== HOME_PATH || window.location.hash !== '') {
       window.location.herf = window.location.origin + HOME_PATH;
       return;
-    }
+  }
 
 /*
     var $intropageelement = document.queryselector('#' + id_intro_page);
@@ -43,6 +42,3 @@
 
     partNavigator.init();
   });
-
-});
-
