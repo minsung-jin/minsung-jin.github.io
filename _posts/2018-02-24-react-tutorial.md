@@ -1,5 +1,7 @@
 # Introduce
 
+* It is the view layer for web applications.
+
 ## React ?
 
 * Facebook에서 개발한 user interface library 로 개발자가 재사용 가능한 UI를 생성 할 수 있다. 
@@ -49,7 +51,7 @@
         <script src="main.js"></script>
       </body>
     </html>
-    
+
 ### Hello.js
 
     import React from 'react';
@@ -84,3 +86,25 @@
 * React 컴포넌트를 렌더링 할 때에는 react-dom 모듈을 불러와서 render 함수를 통하여 렌더링 한다.
     * JSX 형태로 컴포넌트들 설정한다. `<컨포넌트이름/>`
     * id가 app인 element에 렌더링을 하게 설정한다.
+
+### Component
+
+* Hello.js 와 main.js를 변경하여 속성 추가
+
+#### Hello.js
+    import React from 'react';
+
+    function Hello (props) {
+        return (
+            <h1>Hello {props.name}!</h1>
+        );
+    }
+
+    export default Hello;
+
+#### main.js
+    import React from 'react';
+    import {render} from 'react-dom';
+    import Hello from './Hello.js';
+
+    render(<Hello name="World"/>, document.querySelector('#app'));
