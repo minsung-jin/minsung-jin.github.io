@@ -1,5 +1,7 @@
 # Componet
 
+* prop, state, map, life cycle
+
 ## Create Component
 
 ### src/index.js
@@ -138,15 +140,15 @@
 
     </html>
 
-### props
+## props
 
 * `props` 는 컴포넌트에서 사용 할 데이터 중 변동되지 않는 데이터에 이용된다. **parent** 컴포넌트에서 **child** 컴포넌트로 데이터를 전달 할 때, `props`가 사용된다.
 
-#### props 추가하기
+### props 추가하기
 
 * 컴포넌트에서 immutable 데이터가 필요 하면, `render()` 메소드의 내부에 안에 `{ this.props.propsName }` 형식으로 넣고, 컴포넌트를 사용 할 때, `< >` 안에 `propsName="value"` 를 넣어 값을 설정한다.
 
-##### header.js
+#### header.js
 
     import React from 'react';
 
@@ -160,7 +162,7 @@
 
     export default Header;
 
-##### content.js
+#### content.js
 
     import React from 'react';
 
@@ -179,11 +181,11 @@
 
 * contentTitle 와 contentBody props 를 넣었다.
 
-#### props 사용하기
+### props 사용하기
 
 * App 컴포넌트에도 props를 넣어주고, App 컴포넌트에서 사용되는 props 값을 child 컴포넌트들로 아래와 같이 전달한다.
 
-##### app.js
+#### app.js
 
     import React from 'react';
     import Header from './header';
@@ -203,7 +205,7 @@
 
     export default App;
 
-##### index.js
+#### index.js
 
     import React from 'react';
     import ReactDOM from 'react-dom';
@@ -214,12 +216,12 @@
                         contentTitle = "Developer,"
                         contentBody = "Welcome to Web"/>, rootElement);
 
-#### props 기본값 설정
+### props 기본값 설정
 
 * props 값을 임의로 지정해주지 않았을 때 사용하는 기본값을 설정하는 방법
 * 컴포넌트 클래스 하단에 `className.defaultProps = { proName: value}` 를 추가한다.
 
-##### app.js
+#### app.js
 
     import React from 'react';
     import ReactDOM from 'react-dom';
@@ -246,7 +248,7 @@
 
     export default App;
 
-##### index.js
+#### index.js
 
     import React from 'react';
     import ReactDOM from 'react-dom';
@@ -255,12 +257,12 @@
     const rootElement = document.getElementById('root');    
     ReactDOM.render(<App />, rootElement);
 
-#### Type Validate
+### Type Validate
 
 * 컴포넌트에서 원하는 props의 Type 과 전달 된 props 의 Type 이 일치하지 않을 때 콘솔에서 오류 메시지가 나타나게 하는 방법은 컴포넌트 클래스의 `propTypes` 객체를 설정하면 된다.
 * 필수 `props`를 지정하는 방법으로도 사용한다.
 
-##### content.js
+#### content.js
 
     import React from 'react';    
 
@@ -284,7 +286,7 @@
 
 * 두 props 의 Type을 모두 string 으로 지정하고, **body** 는 .isRequired 를 추가하여 필수 props 로 설정 한다.
 
-##### app.js
+#### app.js
 
     import React from 'react';
     import ReactDOM from 'react-dom';
@@ -314,12 +316,12 @@
 * contentTitle 에 숫자를 지정하였고, contentBody에는 빈 값을 전달하도록 설정하였다.
 * Validation 이 실패하면 브라우저에서 오류를 발생 시킨다.
 
-### State
+## State
 
 * 컴포넌트에서 유동적인 데이터를 다룰 때, `state` 를 사용한다. React.js 어플리케이션을 만들때에는 state 를 사용하는 컴포넌트의 갯수를 최소화 하는것이 중요하다.
 * 예를들어 10개의 컴포넌트에서 유동적인 데이터를 사용 한다면, 각 데이터에 state를 사용하지 않고, props를 사용하고 10개의 컴포넌트를 포함시키는 container 컴포넌트를 사용하는게 효율적이다.
 
-#### State Example
+### State Example
 
     import React from 'react';
 
@@ -357,11 +359,11 @@
 * state 를 업데이트 할 때는 `{ this.setState }` 메소드를 사용한다.
 * ES6 클래스에서는 **auto binding** 이 되지 않으므로, setState 메소드를 사용하게 될 메소드를 **bind** 해주어야 한다. (bind 하지 않으면 React Component 가 가지고있는 멤버함수 및 객체에 접근 할 수 없다.)
 
-### State and Props
+## State and Props
 
 * 유동적인 데이터를 렌더링하며, parent 컴포넌트와 communicate 하는 컴포넌트를 만들어 보자.
 
-#### randomNumber.js
+### randomNumber.js
 
     import React from 'react';
     import ReactDOM from 'react-dom';
@@ -396,7 +398,7 @@
 * **this.props.onUpdate(value);** props 로 받은 함수를 실행한다.
 * **constructor(props)** React 컴포넌트의 생성자 이다. **super(props)** 로 상속받은 **React.Component** 의 생성자 메소드를 실행한 후, 입력한 코드를 실행한다. **updateNumber** 메소드에서 this.props 에 접근 할 수 있도록 **binding** 을 한다.
 
-#### app.js
+### app.js
 
     import React from 'react';
     import ReactDOM from 'react-dom';
@@ -449,7 +451,7 @@
 * **state** 를 변경 할 때는 **setState( {key: value} )** 메소드 를 사용한다.
 * **RandomNumber** 컴포넌트를 사용한다.
 
-#### props vs state
+### props vs state
 
 * parent 컴포넌트에 의해 값이 변경 될 수 있는가?
     * props : yes
@@ -457,3 +459,234 @@
 * 컴포넌트 내부에서 변경 될 수 있는가?
     * props : no
     * state : yes
+
+## map
+
+### app.js
+
+    import React from 'react';
+
+    class App extends React.Component {
+        render(){
+
+            return (
+                    <Contacts/>
+            );
+        }
+    }
+
+    class Contacts extends React.Component {
+        render(){
+            return(
+                <div>
+                    <h1>Contacts</h1>
+                    <ul>
+                        <li>Abet 010-0000-0001</li>
+                        <li>Betty 010-0000-0002</li>
+                        <li>Chalie 010-0000-0003</li>
+                        <li>David 010-0000-0003</li>
+                    </ul>
+                </div>
+            );
+        }
+    }
+
+    export default App;
+
+* Contact component 에 이름과 전화번호를 여러개 추가 함.
+
+### ContactInfo component
+
+    class ContactInfo extends React.Component {
+        render() {
+            return(
+                <li>{this.props.name} {this.props.phone}</li>
+            );
+        }
+    }
+
+* 이름과 전화번호 부분을 props 로 변경.
+
+### Contact component
+
+    render(){
+        return(
+            <div>
+                <h1>Contacts</h1>
+                <ul>
+                    <ContactInfo name="Abet" phone="010-0000-0001"/>
+                    <ContactInfo name="Betty" phone="010-0000-0002"/>
+                    <ContactInfo name="Charlie" phone="010-0000-0003"/>
+                    <ContactInfo name="David" phone="010-0000-0004"/>
+                </ul>
+            </div>
+        );
+    }
+
+* ContactInfo component 를 사용하여 Contact component 변경
+
+### Mapping
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            contactData: [
+                {name: "Abet", phone: "010-0000-0001"},
+                {name: "Betty", phone: "010-0000-0002"},
+                {name: "Charlie", phone: "010-0000-0003"},
+                {name: "David", phone: "010-0000-0004"}
+            ]
+        };
+    }
+
+* state 추가 (state는 컴포넌트에서 유동적인 데이터를 관리 할 때 사용)
+
+> 
+
+    render(){
+        return(
+            <div>
+                <h1>Contacts</h1>
+                <ul>
+                    {this.state.contactData.map((contact, i) => {
+                        return (<ContactInfo name={contact.name}
+                                            phone={contact.phone}
+                                              key={i} 
+                                 />
+                        );
+                    })}
+                </ul>
+            </div>
+        );
+    }
+
+### componet map
+
+    import React from 'react';
+
+    class App extends React.Component {
+        render(){
+
+            return (
+                    <Contacts/>
+            );
+        }
+    }
+
+    class Contacts extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                contactData: [
+                    {name: "Abet", phone: "010-0000-0001"},
+                    {name: "Betty", phone: "010-0000-0002"},
+                    {name: "Charlie", phone: "010-0000-0003"},
+                    {name: "David", phone: "010-0000-0004"}
+                ]
+            };
+        }
+        render(){
+            return(
+                <div>
+                    <h1>Contacts</h1>
+                    <ul>
+                        {this.state.contactData.map((contact, i) => {
+                            return (<ContactInfo name={contact.name}
+                                                phone={contact.phone}
+                                                key={i}/>);
+                        })}
+                    </ul>
+                </div>
+            );
+        }
+    }
+
+    class ContactInfo extends React.Component {
+        render() {
+            return(
+                <li>{this.props.name} {this.props.phone}</li>
+            );
+        }
+    }
+
+    export default App;
+
+## LifeCycle API
+
+![Life Cycle](./image/reactComponentLifeCycle.png)
+
+### Constructor
+
+    constructor(props){
+        super(props);
+        console.log("constructor");
+    }
+
+* 생성자 메소드로 컴포넌트가 처음 만들어 질 때 실행되는 메소드
+* 이 메소드에서 state를 넣어 줄 수 있다.
+
+### componentWillMount
+
+    componentWillMount(){
+        console.log("componentWillMount");
+    }
+
+* component 가 DOM 위에 만들어 지기 전에 실행되는 메소드
+
+### rander
+
+* 컴포넌트 렌더링을 담당한다.
+
+### componentDidMount
+
+    componentDidMount() {
+        console.log("componentDidMount");
+    }
+
+* 컴포넌트가 만들어지고 첫 렌더링을 마친 후 실행되는 메소드
+* 여기서 다른 javascript framework 를 연동하거나, setTimeout, setInterval, AJAX 처리 등을 넣는다.
+
+### componentWillReceiveProps
+
+    componentWillReceiveProps(nextProps){
+        console.log("componentWillReceiveProps: " + JSON.stringfy(nextProps));
+    }
+
+* 컴포넌트가 prop 을 새로 받았을 대 실행된다.
+* pop 에 따라 state 를 업데이트해야 할 때 사용하면 유용하다.
+* 여기서 `this.setState()` 를 해도 추가적으로 렌더링 하지 않는다.
+
+### shouldComponentUpdate
+
+    shouldComponentUpdate(nextProps, nextState){
+        console.log("shouldComponentUpdate: " + JSON.stringfy(nextProps) + " " + JSON.stringfy(nextState));
+        return true;
+    }
+
+* prop 혹은 state가 변경되었을 때, 리렌더링 할지 말지 정하는 메소드이다.
+* `return nextProps.id !== this.props.id;` 반환값을 조건처리 하면 유용하다.
+
+### componentWillUpdate
+
+    componetWillUpdate(nextProps, nextState){
+        console.log("componentWillUpdate: " + JSON.stringfy(nextProps) + " " + JSON.stringfy(nextState));
+    }
+
+* 컴포넌트가 업데이트 되기 전에 실행되는 메소드
+* 여기에 `this.setState()`를 사용하면 무한루프에 빠진다.
+
+### componentDidUpdate
+
+    componentDidUpdate(prevProps, prevState){
+        console.log("componentDidUpdate: " + JSON.stringfy(prevProps) + " " + JSON.stringfy(prevState));
+    }
+
+* 컴포넌트가 리렌더링을 마친 후 실행되는 메소드
+
+### componetWillUnmount
+
+    componentWillUnmount(){
+        console.log("componentWillUnmount");
+    }
+
+* 컴포넌트가 DOM 에서 사라진 후 실행되는 메소드
