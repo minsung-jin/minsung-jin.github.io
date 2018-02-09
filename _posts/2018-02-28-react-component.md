@@ -1,3 +1,8 @@
+---
+layout: post
+title: React Component
+---
+
 # Componet
 
 * prop, state, map, life cycle

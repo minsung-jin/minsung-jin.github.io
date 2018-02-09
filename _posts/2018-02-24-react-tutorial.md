@@ -1,3 +1,8 @@
+---
+layout: post
+title: React Tutorial
+---
+
 # Introduce
 
 * It is the view layer for web applications.
