@@ -47,7 +47,7 @@ $ nvm install 6.x 64
     * 사용자 계정의 .bashrc 에 nvm use v6.x 를 추가 후 .bashrc 실행
 ```
 $. .bashrc
-```    
+```
 
 # Node.js upgrade
 
@@ -60,7 +60,7 @@ $. .bashrc
  ```
  - 강제로 캐시 삭제
  ```
- $ sudo npm cache clean -f 
+ $ sudo npm cache clean -f
  npm WARN using --force I sure hope you know what you are doing.
  ```
  - n 모듈 설치
@@ -73,7 +73,7 @@ $. .bashrc
  - n 모듈을 사용하여 Node.js 설치
  ```
  $ sudo n stable
-  
+
      install : node-v6.0.0
          mkdir : /usr/local/n/versions/node/6.0.0
          fetch : https://nodejs.org/dist/v6.0.0/node-v6.0.0-linux-x64.tar.gz
@@ -103,8 +103,8 @@ $. .bashrc
  ```
  - npm 으로 npm 설치
  ```
- $ sudo npm install -g npm 
- /usr/local/bin/npm -> /usr/local/lib/node_modules/npm/bin/npm-cli.js 
+ $ sudo npm install -g npm
+ /usr/local/bin/npm -> /usr/local/lib/node_modules/npm/bin/npm-cli.js
  /usr/local/lib
  └ npm@3.8.8
  ```
@@ -113,4 +113,3 @@ $. .bashrc
  $ npm -v
  3.8.8
  ```
-
