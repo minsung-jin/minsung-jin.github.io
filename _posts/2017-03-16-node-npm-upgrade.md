@@ -32,6 +32,13 @@ or Wget:
 ```
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 ```
+
+* 사용자 계정이 activation 될 때 node.js 도 activation 되도록 설정
+    * 사용자 계정의 .bashrc 에 nvm use v6.x 를 추가 후 .bashrc 실행
+```
+$. .bashrc
+```
+
 Windows 의 경우
 
 nvm windows 버전 설치: https://github.com/coreybutler/nvm-windows 를 통해 설치
@@ -40,7 +47,7 @@ nvm windows 버전 설치: https://github.com/coreybutler/nvm-windows 를 통해
 
 * 32bit 와 64bit를 명시하려면 아래와 같이 추가
 ```
-$ nvm install 6.x 64
+$ nvm install 10.15.3 64
 ```
 
 * 사용자 계정이 activation 될 때 node.js 도 activation 되도록 설정
